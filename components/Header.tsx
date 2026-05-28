@@ -4,23 +4,23 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { colors } from "@/lib/Warna";
-import { LOGO_PATH, PONDOK_INFO } from "@/lib/File";
-import { cn } from "@/lib/lain";
+import { LOGO_PATH, ENTER_INFO, INFONE } from "@/lib/File";
+import { cn } from "@/lib/lain"; 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { href: "", label: "Home" },
-    { href: "/#profil", label: "Profil" },
+    { href: "/#about", label: "Tentang" },
     { href: "/#layanan", label: "Layanan" },
     { href: "/#Produk", label: "Produk" },
-    { href: "/#berita", label: "Berita" },
+    { href: "/#blog", label: "Blog" },
     { href: "/#kontak", label: "Kontak" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-black/95 backdrop-blur-md shadow-lg border-b-2 border-[#009966]/30">
+    <header className="sticky top-0 z-50 bg-black/35 backdrop-blur-md shadow-lg border-b-2 border-[#009966]/30">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo & Brand */}
@@ -28,7 +28,7 @@ const Header = () => {
             <div className="relative h-14 w-14 flex-shrink-0 rounded-xl bg-[#009966]/20 p-2 group-hover:bg-[#009966] transition-colors border border-[#009966]/30">
               <Image
                 src={LOGO_PATH}
-                alt={`Logo ${PONDOK_INFO.shortName}`}
+                alt={`Logo ${INFONE.shortName}`}
                 // fill
                 width={500}
                 height={500}
@@ -38,10 +38,10 @@ const Header = () => {
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-black text-white group-hover:text-[#009966] transition-colors">
-                {PONDOK_INFO.shortName}
+                {INFONE.shortName}
               </h1>
               <p className="text-xs text-white/70 font-medium">
-                {PONDOK_INFO.location}
+                {INFONE.location}
               </p>
             </div>
           </Link>
@@ -52,17 +52,17 @@ const Header = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-white font-semibold hover:text-[#009966] transition-colors relative group"
+                className="text-black font-semibold hover:text-[#009966] transition-colors relative group"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#009966] group-hover:w-full transition-all"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all"></span>
               </Link>
             ))}
             <Link
-              href="/daftar"
+              href="https://play.google.com/store/apps/details?id=com.enterelektrik&hl=id" target="_blank"
               className="px-6 py-2.5 rounded-lg bg-[#009966] text-white font-bold hover:bg-[#006644] transition-all transform hover:scale-105 shadow-lg"
             >
-              Daftar
+              Download Aplikasi
             </Link>
           </div>
 

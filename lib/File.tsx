@@ -2,7 +2,7 @@ export { colors, tailwindColors } from "./Warna";
 
 // Path logo
 export const LOGO_PATH = "/logo.webp";
-
+export const Backgg = "/background.jpg";
 // Path background image
 export const BG_IMAGE_PATH = "/bg.jpg";
 
@@ -10,7 +10,7 @@ export const BG_IMAGE_PATH = "/bg.jpg";
 export const PONDOK_PHOTO_PATH = "/ganti_gambar.jpg";
 
 // Informasi yayasan
-export const YAYASAN_INFO = {
+export const ENTER_INFO = {
   name: "ENTERELEKTRIK",
   shortName: "ENTERCEL",
   location: "Purwosari Pasuruan Jawa Timur",
@@ -21,4 +21,4 @@ export const YAYASAN_INFO = {
 } as const;
 
 // Alias untuk backward compatibility
-export const PONDOK_INFO = YAYASAN_INFO;
+export const INFONE = ENTER_INFO;
