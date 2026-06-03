@@ -1,4 +1,3 @@
-name: FTP Test
 
 on:
   push:
