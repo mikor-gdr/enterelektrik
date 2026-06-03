@@ -15,6 +15,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.4.0
       with:
         server: ftp.entercel.com
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
+        username: enterce1_admin@entercel.com
+        password: M@ypassq1212
   
