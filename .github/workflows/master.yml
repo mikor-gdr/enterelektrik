@@ -1,19 +1,16 @@
-
-on:
-  push:
-    branches: [master]
-
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
-    name: 🚀 Deploy website every commit
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v6
-
-      - name: 📂 Sync files
-        uses: ./
-        with:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v6
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+      with:
         server: ftp.entercel.com
         username: enterce1_admin@entercel.com
         password: M@ypassq1212
