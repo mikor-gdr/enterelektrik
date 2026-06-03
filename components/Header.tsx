@@ -6,7 +6,7 @@ import { useState } from "react";
 import { colors } from "@/lib/Warna";
 import { LOGO_PATH, ENTER_INFO, INFONE } from "@/lib/File";
 import { cn } from "@/lib/lain"; 
-
+ 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -20,7 +20,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-black/35 backdrop-blur-md shadow-lg border-b-2 border-[#009966]/30">
+    <header className="sticky top-0 z-50 bg-[#006644] backdrop-blur-md shadow-lg border-b-2 border-[#009966]/30">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo & Brand */}
